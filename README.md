@@ -76,18 +76,18 @@ ___
 *You see*
 
 `llama2:`
-*[Verse 2]*
-*We could dance in the snow, and sing Christmas carols all night*
-*With our hearts beating fast, and our love shining bright*
-*And I'll never let go, I'll never let you go*
-*You're the only one who knows me like you do*
+_[Verse 2]_
+*We could dance in the snow, and sing Christmas carols all night*<br>
+*With our hearts beating fast, and our love shining bright*<br>
+*And I'll never let go, I'll never let you go*<br>
+*You're the only one who knows me like you do*<br>
 
-*[Chorus]*
-*Can I go where you go?*
-*Can we always be this close?*
-*Forever and ever, ah*
-*Take me out and take me home*
-*You're my, my, my, my lover*
+_[Chorus]_
+*Can I go where you go?*<br>
+*Can we always be this close?*<br>
+*Forever and ever, ah*<br>
+*Take me out and take me home*<br>
+*You're my, my, my, my lover*<br>
 ___
 It can be seen that T5 tends to repeat the original text, but the model still shows some creativity. Llama2 gives quite good quality results. 
 
@@ -96,22 +96,22 @@ In this case, it is clear that the results of llama2 are significantly superior 
 ## Album cover generation
 For album cover generation we can use [DreamBooth](https://dreambooth.github.io/) technique. We have used the excellent [Notebook](https://github.com/ShivamShrirao/diffusers/tree/main/examples/dreambooth) provided by Shivam Shriraro. Here we have to tweak some parameters. It has been found by Reddit community that the best quality is achieved with the following parameters: 30 initial photos of the object (Taylor Swift), 1500 class images (photos of woman), 3000 training steps and 100 inference steps. We use standard token "zwx" as a unique identifier of Taylor Swift. The results can be found below:
 `Prompt` *4K album cover with a photo of zwx woman. We could dance in the snow, and sing Christmas carols all night With our hearts beating fast, and our love shining bright*
-`<p align="center">
+<p align="center">
   <img src="images/Christmas/Untitled.png" width="45%" />
   <img src="images/Christmas/Untitled_2.png" width="45%" /> 
-</p>`
+</p>
 
 `Prompt` *4K album cover with a photo of zwx woman. Keep your heart, keep your hope, son We'll find a way to rise above. Chasing our dreams*
-`<p align="center">
+<p align="center">
   <img src="images/Hope/Untitled_1.png" width="45%" />
   <img src="images/Hope/Untitled_4.png" width="45%" /> 
-</p>`
+</p>
 
 `Prompt` *4K album cover with a photo of zwx woman. The tears I cried were like acid rain (Oh-oh, oh-oh)*
-`<p align="center">
+<p align="center">
   <img src="images/Acid/Untitled.png" width="45%" />
   <img src="images/Acid/Untitled_2.png" width="45%" /> 
-</p>`
+</p>
 
 
 
