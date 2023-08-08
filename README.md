@@ -15,74 +15,74 @@ The original dataset consists of all of [Taylor Swift albums](https://www.kaggle
 Full results are available in the folder [results](results). Let's take a look on some examples:
 ___
 ### Example 1
-`Initial text:`
-*[Verse 1]*
-*Keep your helmet, keep your life, son*
-*Just a flesh wound, here's your rifle*
-*Crawling up the beaches now*
-*"Sir, I think he's bleeding out"*
-*And some things you just can't speak about*
+`Initial text:`<br>
+*[Verse 1]*<br>
+*Keep your helmet, keep your life, son*<br>
+*Just a flesh wound, here's your rifle*<br>
+*Crawling up the beaches now*<br>
+*"Sir, I think he's bleeding out"*<br>
+*And some things you just can't speak about*<br>
 
-*[Chorus]*
-*With you I serve, with you I fall down, down*
-*Watch you breathe in, watch you breathing out, out*
+*[Chorus]*<br>
+*With you I serve, with you I fall down, down*<br>
+*Watch you breathe in, watch you breathing out, out*<br>
 
-`T5:`
-*And maybe the wound is bleeding out, son*
-*"I have an air wound" [John 13:4]*
-*The fire's going out... and all that you could tell me about it," I hear he*
-*Look in, watch him breathing in, see your eyes wide, out, out*
-*Your life is now saved by these hands*
-*With you I fall down, withyou I fall again, not to say anything*
-*Watch you breathe into, watch you breath inside, watch yourself breathing out,*
+`T5:`<br>
+*And maybe the wound is bleeding out, son*<br>
+*"I have an air wound" [John 13:4]*<br>
+*The fire's going out... and all that you could tell me about it," I hear he*<br>
+*Look in, watch him breathing in, see your eyes wide, out, out*<br>
+*Your life is now saved by these hands*<br>
+*With you I fall down, withyou I fall again, not to say anything*<br>
+*Watch you breathe into, watch you breath inside, watch yourself breathing out,*<br>
 
-`llama2:`
-*[Verse 1]*
-*Keep your heart, keep your hope, son*
-*We'll find a way to rise above*
-*Chasing our dreams, we'll never stop*
-*With you by my side, we're unstoppable*
+`llama2:`<br>
+*[Verse 1]*<br>
+*Keep your heart, keep your hope, son*<br>
+*We'll find a way to rise above*<br>
+*Chasing our dreams, we'll never stop*<br>
+*With you by my side, we're unstoppable*<br>
 
-*[Chorus]*
-*With you I dream, with you I soar, up high*
-*Together we'll rise, we'll touch the sky*
-*Your love is my strength, my guiding light*
-*With you I'll always take flight*
+*[Chorus]*<br>
+*With you I dream, with you I soar, up high*<br>
+*Together we'll rise, we'll touch the sky*<br>
+*Your love is my strength, my guiding light*<br>
+*With you I'll always take flight*<br>
 
 ### Example 2
-`Initial text:`
-*[Verse 1]*
-*We could leave the Christmas lights up 'til January*
-*And this is our place, we make the rules*
-*And there's a dazzling haze, a mysterious way about you, dear*
-*Have I known you twenty seconds or twenty years?*
-*[Chorus]*
-*Can I go where you go?*
-*Can we always be this close?*
-*Forever and ever, ah*
-*Take me out and take me home*
-*You're my, my, my, my lover*
+`Initial text:`<br>
+*[Verse 1]*<br>
+*We could leave the Christmas lights up 'til January*<br>
+*And this is our place, we make the rules*<br>
+*And there's a dazzling haze, a mysterious way about you, dear*<br>
+*Have I known you twenty seconds or twenty years?*<br>
+*[Chorus]*<br>
+*Can I go where you go?*<br>
+*Can we always be this close?*<br>
+*Forever and ever, ah*<br>
+*Take me out and take me home*<br>
+*You're my, my, my, my lover*<br>
 
-`T5:`
-*we make the laws!*
-*[Chorus]*
-*Can I go where you go?*
+`T5:`<br>
+*we make the laws!*<br>
+*[Chorus]*<br>
+*Can I go where you go?*<br>
 
-*If only I can tell you how much it will change me before I get hurt*
-*For ever and ever and always to whomever you ask for: "You're my lover."*
-*There are, there's a little dust; there is a mystery about you.*
+*If only I can tell you how much it will change me before I get hurt*<br>
+*For ever and ever and always to whomever you ask for: "You're my lover."*<br>
+*There are, there's a little dust; there is a mystery about you.*<br>
 
-*Take me out and take me home... You're an eternal love that never dieth from me or anything*
-*You see*
+*Take me out and take me home... You're an eternal love that never dieth from me or anything*<br>
+*You see*<br>
 
-`llama2:`
-_[Verse 2]_
+`llama2:`<br>
+_[Verse 2]_<br>
 *We could dance in the snow, and sing Christmas carols all night*<br>
 *With our hearts beating fast, and our love shining bright*<br>
 *And I'll never let go, I'll never let you go*<br>
 *You're the only one who knows me like you do*<br>
 
-_[Chorus]_
+_[Chorus]_<br>
 *Can I go where you go?*<br>
 *Can we always be this close?*<br>
 *Forever and ever, ah*<br>
@@ -97,20 +97,20 @@ In this case, it is clear that the results of llama2 are significantly superior 
 For album cover generation we can use [DreamBooth](https://dreambooth.github.io/) technique. We have used the excellent [Notebook](https://github.com/ShivamShrirao/diffusers/tree/main/examples/dreambooth) provided by Shivam Shriraro. Here we have to tweak some parameters. It has been found by Reddit community that the best quality is achieved with the following parameters: 30 initial photos of the object (Taylor Swift), 1500 class images (photos of woman), 3000 training steps and 100 inference steps. We use standard token "zwx" as a unique identifier of Taylor Swift. The results can be found below:
 `Prompt` *4K album cover with a photo of zwx woman. We could dance in the snow, and sing Christmas carols all night With our hearts beating fast, and our love shining bright*
 <p align="center">
-  <img src="images/Christmas/Untitled.png" width="45%" />
-  <img src="images/Christmas/Untitled_2.png" width="45%" /> 
+  <img src="images/Christmas/Untitled.png" width="35%" />
+  <img src="images/Christmas/Untitled_2.png" width="35%" /> 
 </p>
 
 `Prompt` *4K album cover with a photo of zwx woman. Keep your heart, keep your hope, son We'll find a way to rise above. Chasing our dreams*
 <p align="center">
-  <img src="images/Hope/Untitled_1.png" width="45%" />
-  <img src="images/Hope/Untitled_4.png" width="45%" /> 
+  <img src="images/Hope/Untitled_1.png" width="35%" />
+  <img src="images/Hope/Untitled_4.png" width="35%" /> 
 </p>
 
 `Prompt` *4K album cover with a photo of zwx woman. The tears I cried were like acid rain (Oh-oh, oh-oh)*
 <p align="center">
-  <img src="images/Acid/Untitled.png" width="45%" />
-  <img src="images/Acid/Untitled_2.png" width="45%" /> 
+  <img src="images/Acid/Untitled.png" width="35%" />
+  <img src="images/Acid/Untitled_2.png" width="35%" /> 
 </p>
 
 
