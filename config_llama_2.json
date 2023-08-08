@@ -1,0 +1,8 @@
+{
+    "model_name": "meta-llama/Llama-2-13b-chat-hf",
+    "data_dir": "output_T5_model.json",
+    "output_dir": "res_llama_2",
+    "auth_token": "",
+    "top_k": 40,
+    "max_new_tokens": 200
+}
