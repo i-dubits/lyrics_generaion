@@ -1,0 +1,20 @@
+{
+    "batch_size": 2,
+    "epoch_number": 10,
+    "learning_rate": 1e-5,
+    "num_train_epochs": 10,
+    "gradient_accumulation_steps": 2,
+    "max_target_tokens_count": 1024,
+    "max_source_tokens_count": 1024,
+    "logging_steps": 25,
+    "report_steps": 100,
+    "save_steps": 100,
+    "eval_steps": 100,
+    "warmup_steps": 5,
+    "model_type": "seq2seq_lm",
+    "model_name": "t5-base",
+    "path_to_dataset": "dataset_processed.json",
+    "output_dir": "model_best",
+    "test_size": 0.2,
+    "seed": 1
+}
