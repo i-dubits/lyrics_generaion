@@ -152,20 +152,29 @@ class LyricsPreprocessor:
     def delete_duplicate_first_word_files(directory):
         '''
         Delete song texts which has the same word in its name inside one album (folder)
-        
+
+        Keeps the first occurrence (alphabetically) of each first word and deletes subsequent duplicates
+
         Args:
             directory (str): path to folder
         '''
         for dirpath, dirnames, files in os.walk(directory):
-            first_words = [os.path.splitext(f)[0].split('_')[0].lower() for f in files if f.endswith('.txt')]
-            duplicates = [item for item, count in Counter(first_words).items() if count > 1]
-            for f in files:
-                if os.path.splitext(f)[0].split('_')[0].lower() in duplicates:
+            txt_files = sorted([f for f in files if f.endswith('.txt')])
+            seen_first_words = set()
+
+            for f in txt_files:
+                first_word = os.path.splitext(f)[0].split('_')[0].lower()
+
+                if first_word in seen_first_words:
+                    # This is a duplicate - delete it
                     try:
                         os.remove(os.path.join(dirpath, f))
-                        print(f"Removed file: {os.path.join(dirpath, f)}")
+                        print(f"Removed duplicate file: {os.path.join(dirpath, f)}")
                     except OSError as e:
                         print(f"Error while deleting file {os.path.join(dirpath, f)}: {e}")
+                else:
+                    # First occurrence - keep it
+                    seen_first_words.add(first_word)
 
     @staticmethod
     def extract_data_from_file(file_path):

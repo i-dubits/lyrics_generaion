@@ -12,7 +12,7 @@ We also used DreamBooth to create possible album covers for some new songs
 The original dataset consists of all of [Taylor Swift albums](https://www.kaggle.com/datasets/ishikajohari/taylor-swift-all-lyrics-30-albums). Taylor Swift has many albums in which songs we know and love are given new arrangements. But the arrangements almost never affect the lyrics themselves. So it was necessary to find the same or almost the same songs to remove. In addition, some files contained extraneous metadata that also had to be removed. The dataset was cleaned using a script [preproc_data.py](preproc_data.py). The necessary methods can be found in the file [process_utils.py](process_utils.py)
 
 ## T5 and llama2 results
-Full results are available in the folder [results](results). Let's take a look on some examples:
+Full results are available in the folder upon request. Let's take a look on some examples:
 ___
 ### Example 1
 `Initial text:`<br>
